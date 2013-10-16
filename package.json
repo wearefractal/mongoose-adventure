@@ -1,0 +1,25 @@
+{
+   "name":"mongoose-adventure",
+   "description":"An intro to mongoose via a self-guided workshop",
+   "version":"0.0.1",
+   "homepage":"http://github.com/wearefractal/mongoose-adventure",
+   "repository":"git://github.com/wearefractal/mongoose-adventure.git",
+   "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",
+   
+   "bin": "./bin/workshop.js",
+   "preferGlobal": true,
+
+   "dependencies":{
+      "workshopper": "*",
+      "mongoose": "*"
+   },
+   "engines":{
+      "node":">= 0.4.0"
+   },
+   "licenses":[
+      {
+         "type":"MIT",
+         "url":"http://github.com/wearefractal/mongoose-adventure/raw/master/LICENSE"
+      }
+   ]
+}
