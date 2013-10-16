@@ -1,6 +1,6 @@
 To get started we need to connect to the database.
 
-{red}1.{/red} Write a Node program that connects to a mongodb database located at {bold}{green}mongodb://localhost:29019/workshop{/green}{/bold}.
+{red}1.{/red} Write a Node program that connects to a mongodb database located at {bold}{green}mongodb://localhost:9001/workshop{/green}{/bold}.
 
 {red}3.{/red} console.log {bold}Connected!{/bold} when the connection object fires a {bold}connected{/bold} event.
 
