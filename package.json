@@ -11,7 +11,9 @@
 
    "dependencies":{
       "workshopper": "*",
-      "mongoose": "*"
+      "mongoose": "*",
+      "readable-stream": "*",
+      "rimraf": "*"
    },
    "engines":{
       "node":">= 0.4.0"

@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
-var db = process.argv[1];
-var conn = mongoose.createConnection(db);
+var conn = mongoose.createConnection("mongodb://localhost:9001/workshop");
 
 conn.once('connected', function(){
-  console.log('Connected to', db);
+  console.log('Connected!');
+  process.exit();
 });

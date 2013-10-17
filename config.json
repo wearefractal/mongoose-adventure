@@ -2,5 +2,6 @@
    "name": "mongoose-adventure",
    "title": "Mongoose Adventure",
    "subtitle": "Using MongoDB and Node",
-   "bg": "green"
+   "background": "blue",
+   "foreground": "white"
 }

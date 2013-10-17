@@ -1,13 +1,22 @@
+var path = require('path');
+var dbroot = path.join(__dirname, '../../db');
+
 var startMongo = require('../../lib/startMongo');
 
-module.exports = function (run) {
-  var verify = !run;
+var verify = function (cb) {
+  cb();
+};
 
-  var mongo = startMongo(9001);
-  var serverInfo = "mongodb://localhost:9001/workshop";
+module.exports = function (isRun) {
+  var isVerify = !isRun;
+
+  var mongo = startMongo(dbroot, 9001);
 
   return {
-    args: [serverInfo],
-    close: mongo.close
+    args: [],
+    stdin: null,
+    long: true,
+    close: mongo.close,
+    verify: verify
   };
 };

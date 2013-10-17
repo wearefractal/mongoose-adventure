@@ -11,7 +11,8 @@ workshopper({
   subtitle: config.subtitle,
   appDir: path.join(__dirname, '../'),
   menu: {
-    bg: config.bg
+    bg: config.background,
+    fg: config.foreground
   },
   helpFile : path.join(__dirname, '../help.txt')
 }).init();
