@@ -1,8 +1,10 @@
 To get started we need to connect to the database.
 
-{red}1.{/red} Write a Node program that connects to a mongodb database located at {bold}{green}mongodb://localhost:9001/workshop{/green}{/bold}.
-{red}2.{/red} console.log {bold}Connected!{/bold} when the connection object fires a {bold}connected{/bold} event.
-{red}4.{/red} Remember to call {bold}process.exit(){/bold} when your program is finished!
+{red}1.{/red} Write a Node program that connects to a mongo database using {bold}createConnection{/bold}.
+{red}2.{/red} Log {bold}Connected!{/bold} when the database object fires a {bold}connected{/bold} event.
+{red}3.{/red} Remember to call {bold}process.exit(){/bold} when your program is finished!
+
+The database is located at {bold}{green}mongodb://localhost:9001/workshop{/green}{/bold}
 
 When you have completed your program, you can run it in the test
 environment with:

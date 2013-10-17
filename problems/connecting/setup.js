@@ -3,11 +3,12 @@ var dbroot = path.join(__dirname, '../../db');
 
 var startMongo = require('../../lib/startMongo');
 
-var verify = function (cb) {
+var verify = function (cb, env) {
+  console.log(this, env);
   cb();
 };
 
-module.exports = function (isRun) {
+module.exports = function (isRun, cb) {
   var isVerify = !isRun;
 
   var mongo = startMongo(dbroot, 9001);
@@ -15,7 +16,7 @@ module.exports = function (isRun) {
   return {
     args: [],
     stdin: null,
-    long: true,
+    long: false,
     close: mongo.close,
     verify: verify
   };
