@@ -1,0 +1,24 @@
+Validation logic is handled at the application level.
+
+To define this logic, we create a "Schema".
+
+{red}1.{/red} Write a Node program that connects to a mongo database using {bold}createConnection{/bold}.
+{red}2.{/red} Create a new Schema called {bold}Person{/bold}
+{red}3.{/red} Add a field to {bold}Person{/bold} called {bold}name{/bold} that is a {bold}String{/bold} and is {bold}required{/bold}
+{red}4.{/red} Add a field to {bold}Person{/bold} called {bold}score{/bold} that is a {bold}Number{/bold} and has a default value of {bold}0{/bold}
+{red}5.{/red} Load the {bold}Person{/bold} Schema into mongoose using {bold}db.model{/bold}
+{red}6.{/red} Remember to call {bold}process.exit(){/bold} when your program is finished!
+
+The database is located at {bold}{green}mongodb://localhost:9001/workshop{/green}{/bold}
+
+When you have completed your program, you can run it in the test
+environment with:
+
+  {bold}{appname} run program.js{/bold}
+
+And once you are happy that it is correct then run:
+
+  {bold}{appname} verify program.js{/bold}
+
+And your submission will be verified for correctness. After you have
+a correct solution, run `{bold}{appname}{/bold}` again and select the next problem!
