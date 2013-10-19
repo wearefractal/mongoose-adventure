@@ -1,7 +1,7 @@
 {
    "name":"mongoose-adventure",
    "description":"An intro to mongoose via a self-guided workshop",
-   "version":"0.1.0",
+   "version":"0.1.1",
    "homepage":"http://github.com/wearefractal/mongoose-adventure",
    "repository":"git://github.com/wearefractal/mongoose-adventure.git",
    "author":"Fractal <contact@wearefractal.com> (http://wearefractal.com/)",

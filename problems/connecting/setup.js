@@ -37,7 +37,8 @@ module.exports = function (isRun, cb) {
     long: false,
     execWrap: execWrapFile,
     close: wipeMongo.bind(null, db),
-    verify: verify
+    verify: verify,
+    wait: 3000
   });
 };
 
