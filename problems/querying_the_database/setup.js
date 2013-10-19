@@ -59,7 +59,7 @@ var verify = function (cb) {
     return call.fn === "findOne";
   });
   if (!queryCall) return cb("You didn't call findOne");
-  if (!deepEqual(schemaCall.args[0], expectedQuery)) return cb("You didn't execute the right query");
+  if (!deepEqual(queryCall.args[0], expectedQuery)) return cb("You didn't execute the right query");
 
   tracker.wipe("mongoose.Model");
 

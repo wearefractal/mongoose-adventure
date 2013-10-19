@@ -10,7 +10,7 @@
    "preferGlobal": true,
 
    "dependencies":{
-      "workshopper": "*",
+      "workshopper": "https://github.com/Contra/workshopper/archive/master.tar.gz",
       "mongoose": "*",
       "readable-stream": "*",
       "rimraf": "*",

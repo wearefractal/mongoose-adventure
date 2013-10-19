@@ -53,6 +53,7 @@ module.exports = function (isRun, cb) {
       args: [],
       stdin: null,
       long: false,
+      ignoreStdout: true,
       execWrap: execWrapFile,
       close: mongo.close,
       verify: verify
