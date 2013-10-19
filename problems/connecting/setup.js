@@ -11,11 +11,15 @@ var dbString = "mongodb://localhost:9001/workshop";
 
 var verify = function (cb) {
   var data = tracker.get("mongoose");
+
+  // make sure they called createConnection
   var connectCall = find(data.calls, function(call){
-    return call.fn === "createConnection" && call.args[0] === dbString;
+    return call.fn === "createConnection";
   });
+  if (!connectCall) return cb("You didn't call createConnection");
+  if (connectCall.args[0] !== dbString) return cb("You didn't connect to the right database");
+
   tracker.wipe("mongoose");
-  if (!connectCall) return cb("You either didn't call createConnection or you called it with the wrong arguments");
   cb();
 };
 

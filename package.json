@@ -13,7 +13,9 @@
       "workshopper": "*",
       "mongoose": "*",
       "readable-stream": "*",
-      "rimraf": "*"
+      "rimraf": "*",
+      "deep-equal": "*",
+      "ton": "*"
    },
    "engines":{
       "node":">= 0.4.0"
