@@ -1,6 +1,6 @@
 I have inserted multiple {bold}Person{/bold} objects into the database with different names and scores.
 
-{red}1.{/red} Use your code from the last lesson to start off
+{red}1.{/red} Continue with your code from the last lesson
 {red}2.{/red} Use {bold}Person.find{/bold}, {bold}Person.sort{/bold}, and {bold}Person.limit{/bold} to find the top 3 people in the database sorted by score
 {red}3.{/red} Log the {bold}name{/bold} attribute of the top 3 people in order (use one {bold}console.log{/bold} statement)
 {red}4.{/red} Remember to call {bold}process.exit(){/bold} when your program is finished!

@@ -2,7 +2,7 @@ Validation logic is handled at the application level.
 
 To define this logic, we create a "Schema".
 
-{red}1.{/red} Write a Node program that connects to a mongo database using {bold}createConnection{/bold}.
+{red}1.{/red} Continue with your code from the last lesson
 {red}2.{/red} Create a new Schema called {bold}Person{/bold}
 {red}3.{/red} Add a field to {bold}Person{/bold} called {bold}name{/bold} that is a {bold}String{/bold} and is {bold}required{/bold}
 {red}4.{/red} Add a field to {bold}Person{/bold} called {bold}score{/bold} that is a {bold}Number{/bold} and has a default value of {bold}0{/bold}

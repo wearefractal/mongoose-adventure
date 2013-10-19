@@ -1,16 +1,15 @@
 // utils
 var execWrapFile = require.resolve("../../lib/exec-wrap");
 var tracker = require("../../lib/tracker");
-var startMongo = require('../../lib/start-mongo');
 var find = require('../../lib/array-find');
+var wipeMongo = require('../../lib/wipeMongo');
 var deepEqual = require('deep-equal');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // config
-var path = require('path');
-var dbroot = path.join(__dirname, '../../db');
-var dbString = "mongodb://localhost:9001/workshop";
+var config = require('../../config.json');
+var dbString = config.dbString;
 
 var expectedSchema = {
   name: {
@@ -77,21 +76,17 @@ module.exports = function (isRun, cb) {
   // wipe old logs
   tracker.wipe("mongoose");
 
-  var mongo = startMongo(dbroot, 9001);
   var db = mongoose.createConnection(dbString);
   var Person = db.model('Person', personSchema);
-  mongo.once('error', cb);
-  mongo.once('ready', function(){
-    Person.create(expectedPeople, function(err){
-      if (err) return cb(err);
-      cb(null, {
-        args: [],
-        stdin: null,
-        long: true,
-        execWrap: execWrapFile,
-        close: mongo.close,
-        verify: verify
-      });
+  Person.create(expectedPeople, function(err){
+    if (err) return cb(err);
+    cb(null, {
+      args: [],
+      stdin: null,
+      long: true,
+      execWrap: execWrapFile,
+      close: wipeMongo.bind(null, db),
+      verify: verify
     });
   });
 };

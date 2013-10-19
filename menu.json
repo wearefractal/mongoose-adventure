@@ -2,5 +2,7 @@
    "Connecting",
    "Creating a Schema",
    "Querying the Database",
+   "Updating a document",
+   "Middleware",
    "Query Chaining"
 ]

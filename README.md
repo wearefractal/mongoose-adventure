@@ -1,9 +1,12 @@
+Presentation leading to this https://slid.es/contra/mongoose
+
 ## Usage
 
 Make sure you have mongo installed before running.
 
 ```
 sudo npm install mongoose-adventure -g
+mongoose-adventure setup
 mongoose-adventure
 ```
 

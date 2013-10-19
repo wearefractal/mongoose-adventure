@@ -3,5 +3,7 @@
    "title": "Mongoose Adventure",
    "subtitle": "Using MongoDB and Node",
    "background": "blue",
-   "foreground": "white"
+   "foreground": "white",
+   "mongoPort": 9001,
+   "dbString": "mongodb://localhost:9001/workshop"
 }

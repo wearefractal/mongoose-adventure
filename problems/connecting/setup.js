@@ -1,13 +1,13 @@
 // utils
 var execWrapFile = require.resolve("../../lib/exec-wrap");
 var tracker = require("../../lib/tracker");
-var startMongo = require('../../lib/start-mongo');
 var find = require('../../lib/array-find');
+var wipeMongo = require('../../lib/wipeMongo');
+var mongoose = require('mongoose');
 
 // config
-var path = require('path');
-var dbroot = path.join(__dirname, '../../db');
-var dbString = "mongodb://localhost:9001/workshop";
+var config = require('../../config.json');
+var dbString = config.dbString;
 
 var verify = function (cb) {
   var data = tracker.get("mongoose");
@@ -29,17 +29,15 @@ module.exports = function (isRun, cb) {
   // wipe old logs
   tracker.wipe("mongoose");
 
-  var mongo = startMongo(dbroot, 9001);
-  mongo.once('error', cb);
-  mongo.once('ready', function(){
-    cb(null, {
-      args: [],
-      stdin: null,
-      long: false,
-      execWrap: execWrapFile,
-      close: mongo.close,
-      verify: verify
-    });
+  var db = mongoose.createConnection(dbString);
+
+  cb(null, {
+    args: [],
+    stdin: null,
+    long: false,
+    execWrap: execWrapFile,
+    close: wipeMongo.bind(null, db),
+    verify: verify
   });
 };
 

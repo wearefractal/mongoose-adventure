@@ -1,0 +1,20 @@
+I have inserted one {bold}Person{/bold} into the database with the {bold}name{/bold} set as {bold}Officer Bungus{/bold}
+
+{red}1.{/red} Continue with your code from the last lesson
+{red}2.{/red} When you get the result from the query, increase the {bold}score{/bold} attribute by 10
+{red}3.{/red} Update the document in the database by calling {bold}save{/bold}
+{red}4.{/red} Remember to call {bold}process.exit(){/bold} when your program is finished!
+
+The database is located at {bold}{green}mongodb://localhost:9001/workshop{/green}{/bold}
+
+When you have completed your program, you can run it in the test
+environment with:
+
+  {bold}{appname} run program.js{/bold}
+
+And once you are happy that it is correct then run:
+
+  {bold}{appname} verify program.js{/bold}
+
+And your submission will be verified for correctness. After you have
+a correct solution, run `{bold}{appname}{/bold}` again and select the next problem!

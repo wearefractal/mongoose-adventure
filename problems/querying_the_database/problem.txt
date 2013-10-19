@@ -1,6 +1,6 @@
 I have inserted one {bold}Person{/bold} into the database with the {bold}name{/bold} set as {bold}Officer Bungus{/bold}
 
-{red}1.{/red} Use your code from the last lesson to start off
+{red}1.{/red} Continue with your code from the last lesson
 {red}2.{/red} Use {bold}Person.findOne{/bold} to find a single document from the database where the {bold}name{/bold} attribute matches
 {red}3.{/red} Log the {bold}score{/bold} attribute of the person retrieved from the query
 {red}4.{/red} Remember to call {bold}process.exit(){/bold} when your program is finished!
