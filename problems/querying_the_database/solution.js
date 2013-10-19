@@ -14,9 +14,9 @@ var personSchema = new Schema({
   }
 });
 
-var person = db.model('Person', personSchema);
+var Person = db.model('Person', personSchema);
 
-person.findOne({name: "Officer Bungus"}, function(err, person){
+Person.findOne({name: "Officer Bungus"}, function(err, person){
   console.log(person.score);
   process.exit();
 });

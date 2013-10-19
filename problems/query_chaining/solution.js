@@ -16,4 +16,11 @@ var personSchema = new Schema({
 
 var Person = db.model('Person', personSchema);
 
-process.exit();
+var q = Person.find();
+q.sort('-score');
+q.limit(3);
+
+q.exec(function(err, people){
+  console.log(people[0].name, people[1].name, people[2].name);
+  process.exit();
+});
